@@ -1,18 +1,19 @@
 {
     "name": "Mti_I2C_library",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "libreria Mti con comunicazione I2C",
     "keywords": "planet, happiness, people",
+    "url": "https://github.com/kkfranco98/Mti_I2C_Library.git",
     "authors": [
-        {
-            "name": "Manuel D'innocenti"
-        },
         {
             "name": "Francesco Simonetti",
             "maintainer": true
+        },
+        {
+            "name": "Manuel D'innocenti"
         }
     ],
     "license": "MIT",
-    "frameworks": "*",
+    "frameworks": "arduino",
     "platforms": "*"
 }
