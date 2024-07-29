@@ -1,0 +1,46 @@
+#pragma once
+
+#include <Wire.h>
+
+#include "Mti_I2C_Library.h"
+
+Mti_I2C_Library Mti(SLAVE_ADDRESS);
+
+angle_axis offset_angle;
+
+void setup()
+{
+    Serial.begin(115200);
+    Mti.begin();
+
+    Mti.set_angle_offset(offset_angle);
+}
+
+void loop()
+{
+
+    if (Mti.update())
+    {
+        Serial.print('\n angle: ');
+        Serial.print(Mti.get_angle_axis_with_offset().x_angle);
+        Serial.print(" , ");
+        Serial.print(Mti.get_angle_axis_with_offset().y_angle);
+        Serial.print(" , ");
+        Serial.println(Mti.get_angle_axis_with_offset().z_angle);
+
+        Serial.print('\n acceleration: ');
+        Serial.print(Mti.get_acceleration_axis().x);
+        Serial.print(" , ");
+        Serial.print(Mti.get_acceleration_axis().y);
+        Serial.print(" , ");
+        Serial.println(Mti.get_acceleration_axis().z);
+
+        Serial.print('\n angular speed: ');
+        Serial.print(Mti.get_angular_speed_axis().x);
+        Serial.print(" , ");
+        Serial.print(Mti.get_angular_speed_axis().y);
+        Serial.print(" , ");
+        Serial.println(Mti.get_angular_speed_axis().z);
+        
+    }
+}

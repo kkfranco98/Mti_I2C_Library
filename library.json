@@ -1,0 +1,18 @@
+{
+    "name": "Mti_I2C_library",
+    "version": "1.0.0",
+    "description": "libreria Mti con comunicazione I2C",
+    "keywords": "planet, happiness, people",
+    "authors": [
+        {
+            "name": "Manuel D'innocenti"
+        },
+        {
+            "name": "Francesco Simonetti",
+            "maintainer": true
+        }
+    ],
+    "license": "MIT",
+    "frameworks": "*",
+    "platforms": "*"
+}
